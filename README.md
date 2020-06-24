@@ -34,14 +34,14 @@ This course teaches ...
 Chapter | Date | Sub-Topics | Experimental Materials | Support Materials
 --- | --- | --- | :---: | :---:
 1 - Introduction to Signal Acquisition |  | - Science Jornal <br> - OpenSignals <br> - HiMotion Dataset |  [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/tree/master/1.Signal_Acquisition) | [Notes/Slides](../../raw/master/Lecture_Notes) |
-2 - Signal Processing and Feature Extraction |  | EEG Dataset (Hospital Santa Maria) | [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/JoanaFigPinto/notebooksIT/master?urlpath=lab/tree/2.Signal_Processing_and_Feature_Extraction) | [Notes/Slides](../../raw/master/Lecture_Notes) |
-3 - Classification |  | - Autoencoders (respiration signals) | [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/JoanaFigPinto/notebooksIT/master?urlpath=lab/tree/3.Classification) | [Notes/Slides](../../raw/master/Lecture_Notes) |
-4 - Applications |  | Swimming Performance Analysis | [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/JoanaFigPinto/notebooksIT/master?urlpath=lab/tree/4.Applications)| [Notes/Slides](../../raw/master/Lecture_Notes) |
+2 - Signal Processing and Feature Extraction |  | EEG Dataset (Hospital Santa Maria) | [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/2.Signal_Processing_and_Feature_Extraction) | [Notes/Slides](../../raw/master/Lecture_Notes) |
+3 - Classification |  | - Autoencoders (respiration signals) | [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/3.Classification) | [Notes/Slides](../../raw/master/Lecture_Notes) |
+4 - Applications |  | Swimming Performance Analysis | [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/4.Applications)| [Notes/Slides](../../raw/master/Lecture_Notes) |
 
 
 
 ## Notebooks Repository
-[![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/JoanaFigPinto/notebooksIT/master?urlpath=lab/tree)
+[![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree)
 
 
 ## Test another github repository
