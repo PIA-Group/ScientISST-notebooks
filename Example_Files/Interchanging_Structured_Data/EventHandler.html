@@ -1,0 +1,34 @@
+<html>
+    <script language="javascript" type="text/javascript" src="jquery.js"></script> 
+    <script language="javascript" type="text/javascript" src="jquery.flot.js"></script> 
+    <script type="text/javascript">
+        var ws = new WebSocket("ws://localhost:9000/");
+
+        function button1() {
+            data = {'event': 'ACTION1', 'args': '1'};
+            ws.send(JSON.stringify(data));
+        }
+
+        function button2() {
+            data = {'event': 'ACTION2', 'args': '2'};
+            ws.send(JSON.stringify(data));
+        }
+
+        function button3() {
+            data = {'event': 'ACTION3', 'args': '1'};
+            ws.send(JSON.stringify(data));
+        }
+
+        ws.onmessage = function (e) {
+            $("#log").html(e.data)
+        }
+    </script>
+    <body>
+        <h1>Event Handler Demo</h1>
+	<input type="button" value="Button 1"/ onclick="button1()">
+	<input type="button" value="Button 2"/ onclick="button2()">
+	<input type="button" value="Button 3"/ onclick="button3()">
+        <hr/>
+	<p id="log"></p>
+    </body>
+</html>

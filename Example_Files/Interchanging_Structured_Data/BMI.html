@@ -1,0 +1,32 @@
+<html>
+    <script language="javascript" type="text/javascript" src="jquery.js"></script> 
+    <script language="javascript" type="text/javascript" src="jquery.flot.js"></script> 
+    <script type="text/javascript">
+        var ws = new WebSocket("ws://localhost:9000/");
+
+        function submit() {
+            data = {'weight': $("#weight").val(),
+                    'height': $("#height").val()};
+            ws.send(JSON.stringify(data));
+        }
+
+        ws.onmessage = function (e) {
+            response = JSON.parse(e.data);
+            $("#BMI").val(response['BMI']);
+            $("#category").val(response['category']);
+        }
+    </script>
+    <body>
+        <h1>BMI Calculator</h1>
+	<p>Weigth (Kg):</p>
+        <input id="weight" type="text"/>
+        <p>Height (cm):</p>
+	<input id="height" type="text"/>
+	<input type="button" value="Send"/ onclick="submit()">
+        <hr/>
+	<p>BMI:</p>
+	<input id="BMI" type="text"/>
+	<p>Category:</p>
+	<input id="category" type="text"/>
+    </body>
+</html>

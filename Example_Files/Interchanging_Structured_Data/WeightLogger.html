@@ -1,0 +1,33 @@
+<html>
+    <script language="javascript" type="text/javascript" src="jquery.js"></script> 
+    <script language="javascript" type="text/javascript" src="jquery.flot.js"></script> 
+    <script type="text/javascript">
+        var ws = new WebSocket("ws://localhost:9000/");
+
+        function submit() {
+            data = {'weight': $("#weight").val()};
+            ws.send(JSON.stringify(data));
+        }
+
+        ws.onmessage = function (e) {
+            response = JSON.parse(e.data);
+            log = response['weight'];
+            content = ""
+            for (var i = 0; i<log.length; i++) {
+                content+=log[i][0];
+                content+=" | ";
+                content+=log[i][1];
+                content+="<br/>";
+            }
+            $("#log").html(content);
+        }
+    </script>
+    <body>
+        <h1>Weight Logger</h1>
+	<p>Weigth (Kg):</p>
+        <input id="weight" type="text"/>
+	<input type="button" value="Add"/ onclick="submit()">
+        <hr/>
+	<p id="log"></p>
+    </body>
+</html>
