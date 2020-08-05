@@ -1,0 +1,26 @@
+<html>
+    <script language="javascript" type="text/javascript" src="jquery.js"></script> 
+    <script language="javascript" type="text/javascript" src="jquery.flot.js"></script> 
+    <script type="text/javascript">
+        var ws = new WebSocket("ws://localhost:9000/");
+        var timer;
+
+        ws.onopen = function() {
+            timer = setInterval(function(){ ws.send(''); }, 250);
+        };
+
+        // Handle the messages sent by the server
+        ws.onmessage = function (e) {
+            data = eval(e.data)
+            $.plot($("#placeholder"), [ data ], {yaxis: {min:0, max: 1}});
+        }
+
+        ws.onclose = function() {
+            clearInterval(timer);
+        }
+    </script>
+    <body>
+        <h1>Random Data Visualizer</h1>
+	<div id="placeholder" style="height: 500px; width: 100%"></div>
+    </body>
+</html>
