@@ -43,10 +43,4 @@ Chapter | Date | Sub-Topics | Experimental Materials | Support Materials
 
 ## Notebooks Repository
 [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree)
-
-
-## Test another github repository
-[![Binder](http://mybinder.org/badge_logo.svg)](https://github.com/JoanaFigPinto/teste/blob/master?urlpath=lab/tree) - does not work!
-
- http://mybinder.org/v2/gh/JoanaFigPinto/notebooksIT/master?urlpath=lab/tree/4.Applications
  
