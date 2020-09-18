@@ -4,6 +4,7 @@
  ## Program: 
  
 ID | Chapter | Tags | Duration | Authors | Last update 
+--- | --- | --- | :---: | :---:
 A003 OpenSignals for Annotations| ||1hour|Prof. Hugo Silva, Joana Pinto|2020-09-07|
 A001 Open Signals| |Open Signals, Biosignals, Physiological Signals Acquisition, |1hour|Prof. Hugo Silva, Joana Pinto|2020-09-18|
 A004 Arduino Essentials| ||1hour|Prof. Hugo Silva, Joana Pinto|2020-09-18|
