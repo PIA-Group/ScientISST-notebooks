@@ -1,32 +1,5 @@
 
-# Machine Learning in Bioengineering
-
-
-## Course Information
-
-This course teaches ...
-
-
-#### Schedule:
-
-`Lectures:` e.g. Friday 3pm
-
-`Labs:` e.g. Friday 3pm
-
-`Support:` e.g. Friday 3pm
-
-
-#### Team:
- - Instructors: 
-   - Ana Fred [afred@lx.it.pt](mailto:afred@lx.it.pt)
-   - Hugo Silva [hsilva@lx.it.pt](mailto:hsilva@lx.it.pt)
- - Assistants:
-   - ..
-   - ..
-   
-
-
-
+# ScientIST Notebooks
 
 
  
