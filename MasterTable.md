@@ -1,8 +1,9 @@
 # Courses Repository 
  This Table provides an overview to the complete set of notebooks made available in this repository. 
+ 
  These are independent and can be selected independently and organized as most suits the purpose of the course.  
 
- ## Program:  
+ ## Detailed list:  
 ID | Name | Tags | Duration | Authors | Last update 
 --- | --- | --- | --- | --- | --- 
 A001 |  Open Signals | Open Signals, Biosignals, Physiological Signals Acquisition,|1hour| Name Surname|2020-09-23|
