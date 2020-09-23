@@ -1,7 +1,12 @@
 # Courses Repository 
  This file provides an overview to the complete set of notebooks made available in this repository. These are independent an can be organized and selected independently as most suits the purpose of the course. 
 
+<<<<<<< HEAD
  ## Program:  
+=======
+ ## Program: 
+ 
+>>>>>>> bf983b5dfa9cdf9bb2788fc1f3f9f077cdc3660c
 ID | Name | Tags | Duration | Authors | Last update 
 --- | --- | --- | --- | --- | --- 
 A003 |  OpenSignals for Annotations | |1hour|Prof. Hugo Silva, Joana Pinto|2020-09-07|
