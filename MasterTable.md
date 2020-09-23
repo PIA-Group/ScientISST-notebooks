@@ -6,7 +6,7 @@
  ## Detailed Repository:  
 ID | Name | Chapter | Tags | Duration | Authors | Last update 
 --- | --- | --- | --- | --- | --- | --- 
-A001 |  Open Signals | Signal Acquisition | Open Signals```, Biosignals, Physiological Signals Acquisition,|1hour| Name Surname|2020-09-23|
+A001 |  Open Signals | Signal Acquisition | ```Open Signals```, Biosignals, Physiological Signals Acquisition,|1hour| Name Surname|2020-09-23|
 A003 |  OpenSignals for Annotations | Signal Acquisition | |1hour|Prof. Hugo Silva, Joana Pinto|2020-09-07|
 A004 |  Arduino Essentials | Signal Acquisition | |1hour|Prof. Hugo Silva, Joana Pinto|2020-09-18|
 B001 |  File Exploration | Graphical User Interface | |1hour|Prof. Hugo Silva, Joana Pinto|2020-09-18|
