@@ -1,5 +1,6 @@
 # Courses Repository 
- This file provides an overview to the complete set of notebooks made available in this repository. These are independent an can be organized and selected independently as most suits the purpose of the course. 
+ This Table provides an overview to the complete set of notebooks made available in this repository. 
+ These are independent and can be selected independently and organized as most suits the purpose of the course.  
 
  ## Program:  
 ID | Name | Tags | Duration | Authors | Last update 
