@@ -21,3 +21,11 @@ C003 |  Sampling | Signal Processing | Time Sampling, Real-Time Acquisition Syst
 C004 |  Live Streaming | Signal Processing | Serial Port, Python, Live Streaming,|1hour|Prof. Hugo Silva, Joana Pinto|2020-09-28|
 C005 |  Basic Primer on APIs | Signal Processing | Application Programming Interfaces (APIs), Python, Bitalino,|1hour|Prof. Hugo Silva, Joana Pinto|2020-09-28|
 C006 |   Real-time Analytics | Signal Processing | Electromyography (EMG), Python, Biofeedback System,|1hour|Prof. Hugo Silva, Joana Pinto|2020-09-28|
+C007 |  PPG from Smartphone Camera | Signal Processing | Photoplethysmogram (PPG), Smartphone, Camera,|1hour|Prof. Hugo Silva, Joana Pinto|2020-09-28|
+D001 |  Essentials of Post-processing | Feature Extraction | Low-Pass Filter, Python, Plotting,|1hour|Prof. Hugo Silva, Joana Pinto|2020-09-28|
+D002 |  Working with Features | Feature Extraction | Electrocardiography (ECG), Python, Poincare Plot, Heart Rate Variability,|1hour|Prof. Hugo Silva, Joana Pinto|2020-09-28|
+E001 |  Autoencoders Respiration | Classification | Autoencoders, Neural Networks, Supervised Learning, Apnea Detection,|1hour|Prof. Hugo Silva, Joana Pinto|2020-09-28|
+E002 |  Signal Classification Using SL | Classification | Supervised Learning, Biosignals, Signal Classification,|1hour|Prof. Hugo Silva, Joana Pinto|2020-09-28|
+E003 |  Classification of Human Activity Data | Classification | Supervised Learning, Unsupervised Learning, Accelerometry Data,|1hour|Prof. Hugo Silva, Joana Pinto|2020-09-28|
+E004 |  Clustering of Human Activity Data | Classification | Clustering, Unsupervised Learning, Accelerometry Data,|1hour|Prof. Hugo Silva, Joana Pinto|2020-09-28|
+F001 |  Swimming | Applications | IMU data, Data filtering, Data segmentation, Feature Extraction,|1hour|Prof. Hugo Silva, Joana Pinto|2020-09-28|
