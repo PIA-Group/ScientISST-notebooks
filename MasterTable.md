@@ -5,7 +5,7 @@
 
  ## Detailed Repository:  
 ID | Name | Chapter | Tags | Authors | Last update 
---- | --- | --- | --- | --- | --- | --- 
+--- | --- | --- | --- | --- | --- 
 A001 |  Open Signals | Signal Acquisition | |utors: Prof. Hugo Silva; Joana Pinto|2020-09-28|
 A003 |  OpenSignals for Annotations | Signal Acquisition | |utors: Tiago Rodrigues|2020-09-28|
 A004 |  Arduino Essentials | Signal Acquisition | |utors: Prof. Hugo Silva; Joana Pinto|2020-09-28|
