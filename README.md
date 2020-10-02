@@ -9,7 +9,6 @@
 ## List of All Contents
 - [Master Table](https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Courses/MasterTable%20copy.md)
  
-## Program:
 Chapter | Notebooks
 --- | ---
 A - Introduction to Signal Acquisition |    [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/A.Signal_Acquisition) 
