@@ -1,6 +1,10 @@
 
 # ScientIST Notebooks
 
+## Courses
+
+- [IEB]()
+- [Telemedicina]()
 
  
 ## Program:
