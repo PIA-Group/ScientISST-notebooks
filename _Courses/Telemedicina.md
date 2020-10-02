@@ -1,6 +1,7 @@
 
-# Telemedicina // ```2020-2021```
-```Licenciatura em Engenharia Biomédica``` | ```Escola Superior de Tecnologia de Setúbal - IPS``` | 
+# Telemedicina 
+```Licenciatura em Engenharia Biomédica``` | ```Escola Superior de Tecnologia de Setúbal - IPS```
+```2020-2021```
 
 ## Description
 
