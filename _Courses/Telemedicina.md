@@ -14,30 +14,30 @@ A unidade curricular de IEB ([página da cadeira no Fénix](https://fenix.tecnic
 
 ```Project-Based Learning (PBL)```, ```Active Learning```, ```m-learning```, ```Jupyter Notebooks```
 
-## Funcionamento 
+## Informations
 
-#### Horário:
+#### Schedule:
 
-`Aulas:` [e.g. Friday 3pm]
+`Classes:` [e.g. Friday 3pm]
 
-`Horário de Dúvidas:` [e.g. Friday 3pm]
+`Doubts:` [e.g. Friday 3pm]
 
-#### Formato:
+#### Regime:
 
 `Regime:` presencial ? vs ? online
 
-`Aulas:` 1) Seminários e 2) Aulas práticas baseadas na aprendizagem com recurso a Notebooks (programa abaixo).
+`Classes:` 1) Seminários e 2) Aulas práticas baseadas na aprendizagem com recurso a Notebooks (programa abaixo).
  
 
-#### Responsáveis pela Cadeira:
+#### Responsibles:
  - [name] [email@email.pt](mailto:email@email.pt)
  - Assistants:
    - ..
    - ..
 
 
-## Programa
-Tema | Data | Responsável | Chapter | Notebook 
+## Program
+Subject | Date | Responsible | Chapter | Notebook 
 --- | ---| --- | --- | ---
 Open Signals | X/10/2020 | Prof. | A - Introduction to Signal Acquisition |   [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/A.Signal_Acquisition/A001%20Open%20Signals.ipynb) 
 File Exploration | X/10/2020 | Prof. | B - Graphical User Interface |  [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/B.Graphical_User_Interface/B001%20File%20Exploration.ipynb)
