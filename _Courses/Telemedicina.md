@@ -2,15 +2,8 @@
 # Telemedicina
 ```Licenciatura em Engenharia Biomédica``` | ```Escola Superior de Tecnologia de Setúbal - IPS``` | ```2020-2021```
 
-## Descriçao e Objetivos
+## Description
 
-A unidade curricular de IEB ([página da cadeira no Fénix](https://fenix.tecnico.ulisboa.pt/disciplinas/IEB/2009-2010/1-semestre/pagina-inicial)) visa introduzir os estudantes à estrutura do curso, apresentando os argumentos que levaram à organização atual deste curso multi-disciplinar.  
-
-- Contacto com casos típicos tirados da prática que serão analisados em conjunto de forma a estimular a análise critica dos estudantes e familiarizá-los com problemas encontrados na prática da EBM, nomeadamente nas seguintes áreas:  biomateriais,  órgãos artificiais,  biotecnologia,  bioinformática,  biologia computacional, biomecânica,  instrumentação aquisição de sinais fisiológicos,  técnicas de diagnóstico,  
-  
-- Análise de um problema concreto (em pequenos grupos; por exemplo: como desenvolver e equacionar uma estratégia para obter uma solução e esquematizar a sua implantação prática). 
-  
-- Os grupos de estudantes serão estimulados a usar fontes de informação da Internet, além de outras que serão distribuídas.
 
 ```Project-Based Learning (PBL)```, ```Active Learning```, ```m-learning```, ```Jupyter Notebooks```
 
@@ -21,12 +14,6 @@ A unidade curricular de IEB ([página da cadeira no Fénix](https://fenix.tecnic
 `Classes:` [e.g. Friday 3pm]
 
 `Doubts:` [e.g. Friday 3pm]
-
-#### Regime:
-
-`Regime:` presencial ? vs ? online
-
-`Classes:` 1) Seminários e 2) Aulas práticas baseadas na aprendizagem com recurso a Notebooks (programa abaixo).
  
 
 #### Responsibles:
