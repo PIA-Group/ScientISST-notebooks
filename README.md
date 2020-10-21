@@ -7,7 +7,7 @@
 - [Telemedicina](https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Courses/Telemedicine.md) - ```Escola Superior de Tecnologia de Setúbal, IPS```
 
 ## List of All Contents
-- [Master Table](https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Courses/MasterTable%20copy.md)
+- [Master Table](https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Courses/MasterTable.md)
  
 Chapter | Notebooks
 --- | ---
