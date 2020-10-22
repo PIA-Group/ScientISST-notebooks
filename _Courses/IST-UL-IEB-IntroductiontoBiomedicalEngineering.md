@@ -32,7 +32,7 @@ The [IBE](https://fenix.tecnico.ulisboa.pt/disciplinas/IEB25179577/2020-2021/1-s
  
 
 #### Coordinator:
- - Prof. Ana Luisa Nobre Fred [afred@lx.it.pt](mailto:afred@lx.it.pt)
+ - Prof. Ana Luisa Nobre Fred ([afred@lx.it.pt](mailto:afred@lx.it.pt))
 
 
 ## Program
