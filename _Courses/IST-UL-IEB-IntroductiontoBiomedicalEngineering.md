@@ -31,12 +31,12 @@ The [IBE](https://fenix.tecnico.ulisboa.pt/disciplinas/IEB25179577/2020-2021/1-s
 `Classes:` Seminars + Practical classes based on the program below
  
 
-#### Reponsibles:
- - [Prof. Ana Luisa Nobre Fred] [afred@lx.it.pt](mailto: afred@lx.it.pt)
+#### Coordinator:
+ - Prof. Ana Luisa Nobre Fred [afred@lx.it.pt](mailto: afred@lx.it.pt)
 
 
 ## Program
-NB code | Subject | Date | Responsible | Chapter | Notebook 
+NB code | Subject | Date | Faculty | Chapter | Notebook 
 --- | --- | ---| --- | --- | ---
 C010 | Setup your Python workspace | X/10/2020 | Prof. | C - Signal Processing |  [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/C.Signal_Processing/C010%20Setup%20your%20Python%20workspace.ipynb)
 A001 | Open Signals | X/10/2020 | Prof. | A - Introduction to Signal Acquisition |   [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/A.Signal_Acquisition/A001%20Open%20Signals.ipynb) 
