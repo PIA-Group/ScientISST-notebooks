@@ -3,11 +3,11 @@
 
 ## Courses
 
-- [IEB](https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Courses/IEB.md) - ```Instituto Superior Técnico, Universidade de Lisboa```
-- [Telemedicina](https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Courses/Telemedicina.md) - ```Escola Superior de Tecnologia de Setúbal, IPS```
+- [IEB](https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Courses/IST-UL-IEB-IntroductiontoBiomedicalEngineering.md) - ```Instituto Superior Técnico, Universidade de Lisboa```
+- [Telemedicina](https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Courses/Telemedicine.md) - ```Escola Superior de Tecnologia de Setúbal, IPS```
 
 ## List of All Contents
-- [Master Table](https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Courses/MasterTable%20copy.md)
+- [Master Table](https://github.com/PIA-Group/ScientIST-notebooks/blob/master/MasterTable.md)
  
 Chapter | Notebooks
 --- | ---

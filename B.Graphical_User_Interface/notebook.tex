@@ -1,0 +1,671 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{B001 File Exploration}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    \#
+
+ { File Exporation }
+
+    \subsection{\texorpdfstring{{ Keywords: }}{ Keywords: }}\label{keywords}
+
+    \texttt{Hierarchical\ Data\ Format\ (HDF)}, \texttt{Data\ Loading},
+\texttt{Metadata}
+
+    \section{I. Introduction}\label{i.-introduction}
+
+    \#\#
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Background
+\end{enumerate}
+
+    Plain text files (such as the ones we have worked with so far) are a
+straightforward and widely used way of storing and sharing data.
+Although there are several efforts towards standardization, in reality
+developers, vendors, practitioners and other stakeholders are often
+driven to create their own data representation formats, with well over
+100+ documented formats targeting biosignals alone {[}1{]}. In this
+lesson our experiments will be centered around the loading and handling
+of data stored in formats other than those we have previously used.
+
+    \#\#
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Objectives
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Understand certain nuances that appear when dealing with biosignal
+  data recorded using tools other than the ones used to date
+\item
+  Deepen your knowledge on the tools for data loading in Python
+\item
+  Get familiar with binary data representation for storage of large data
+  volumes, in particular the Hierarchical Data Format (HDF)
+\end{itemize}
+
+    \#\#
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Materials
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Anaconda Python 2.7
+\item
+  GEMuseXMLReader for Python
+\item
+  HDF5 for Python
+\end{itemize}
+
+    \section{II. Experimental}\label{ii.-experimental}
+
+    \#\#
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Embracing Diversity
+\end{enumerate}
+
+Until now we have worked with tab-delimited plain text ASCII files, with
+a header automatically skipped when loading (due to the \# prefix),
+followed by a sequence of lines. This approach belongs to the family of
+delimiter-separated formats, more widely known as Comma-Separated Values
+(CSV) file format, where the basic concept is to have each line
+corresponding to a data record containing one or more fields (e.g.
+sensor measurements), separated by a known delimitation character. Due
+to its simplicity, it is a common data exchange format and widely
+supported across end-user and professional software tools alike.
+However, there are few conventions or standards, reason for which a
+plethora of variants is usually found. In this experiment, we will learn
+how to adjust some of the file loading options in order to cope with
+variations of the CSV files content:
+
+\begin{verbatim}
+1. Download the file with sample ECG data available through the following link:
+\end{verbatim}
+
+https://www.dropbox.com/s/gfnmrbj37oopce3/T06\_29.csv?dl=0
+
+\begin{verbatim}
+2. Inspect the file using a spreadsheet or text editor software of your liking, and observe how it differs from the previous format you have been working with
+
+3. Create a new (empty) Python script in the Spyder IDE
+
+4. Implement a program that loads the CSV file (using the loadtxt(...) function) and plots the TIMESTAMP (time in seconds since the beginning of the acquisition) against the A2 column (digital codes produced by the ADC for a given sensor output)
+
+5. Run your script and analize the output
+\end{verbatim}
+
+    { Note }
+
+The first row of the file corresponds to the header formatted in a way
+that will not be automatically skipped, the delimiter is the ;
+character, and the number of columns is only the same from the third row
+onwards. You'll see that the loadtxt(...) function has options to handle
+these variants, by reviewing the documentation found at:
+
+https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.loadtxt.html
+
+    \#\#
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  From Raw Measurements to Metadata
+\end{enumerate}
+
+While the CSV format is quite handy to store tabular data, it can
+quickly become quite restrictive especially in cases where, in addition
+to the core biosignal data, contextual information is included (e.g.
+patient data, acquisition system specifications, experimental procedure
+information). To overcome these limitations, more recently the focus has
+shifted to more semantic approaches {[}1, 2, 3{]}, which enable the
+integration of disparate and heterogeneous sources of medical
+information and facilitate their query and retrieval. One such approach
+is based on markup languages, using a set of rules for encoding
+documents in a format that is both human-readable and machine-readable,
+of which eXtensible Markup Language (XML) is arguably the most widely
+adopted. In this experiment we will analyse a real-world case of files
+recorded by a medical-grade Electrocardiograph (ECG):
+
+\begin{verbatim}
+1. Download the file with sample ECG data available through the following link:
+\end{verbatim}
+
+https://www.dropbox.com/s/csf135ad6n5dssm/0000001A.XML?dl=0
+
+\begin{verbatim}
+2. Browse the file to inspect its content using an XML viewer, e.g., the following online tool:
+\end{verbatim}
+
+ http://www.xmlviewer.org/
+
+\begin{verbatim}
+3. As you can see, different types of information (e.g. type of equipment, filters, interpretation, etc.) are stored on the file, together with the ECG waveforms for different leads, as a hierarchical set of human-readable groupings; use the Tree View option to see a better visual representation of the file content
+
+4. Download the GEMuseXMLReader module from:
+\end{verbatim}
+
+https://github.com/DFNOsorio/GEMuseXMLReader
+
+\begin{verbatim}
+5. Extract the files and move the content to a working directory of your pref-
+erence (alternatively you can add the containing folder to the PYTHONPATH manager on Spyder)
+
+6. Download the xmltodict module from:
+\end{verbatim}
+
+https://github.com/martinblech/xmltodict
+
+\begin{verbatim}
+7. Extract the files and move the content to a working directory of your preference (alternatively you can add the containing folder to the PYTHONPATH manager on Spyder)
+
+8. Create a new (empty) Python script in the Spyder IDE
+
+9. Copy the code snippet shown in Figure 10.1 to your script
+
+10. Run your script and analize the output; you should see a plot corresponding to the raw Lead I ECG data
+\end{verbatim}
+
+Example code to read ECG waveform data stored in the GE MUSE XML format:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{k+kn}{import} \PY{n+nn}{pylab} \PY{k}{as} \PY{n+nn}{pl}
+        \PY{k+kn}{from} \PY{n+nn}{GEMuseXMLReader} \PY{k}{import} \PY{err}{∗}
+        
+        \PY{n}{GEMuseData} \PY{o}{=} \PY{n}{GEMuseXMLReader}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{0000001A.XML}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        
+        \PY{n}{pl}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{p}{)}
+        \PY{n}{pl}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{GEMuseData}\PY{o}{.}\PY{n}{dataObject}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{I}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+        \PY{n}{pl}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    Example code for direct access to the Lead I ECG data stored in the GE
+MUSE XML format (optional exercise):
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{n}{GEMuseData}\PY{o}{.}\PY{n}{dataObject}\PY{o}{=}\PY{p}{\PYZob{}}\PY{p}{\PYZcb{}}
+        \PY{n}{GEMuseData}\PY{o}{.}\PY{n}{dataObject}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{I}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{=} \PY{n}{array}\PY{p}{(}\PY{n}{GEMuseData}\PY{o}{.}\PY{n}{dic}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sapphire}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dcarRecord}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{patientInfo}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{visit}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{order}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ecgResting}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}
+        \PY{n}{params}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{][}\PY{l+s+s1}{\PYZsq{}}\PY{n}{ecg}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{][}\PY{l+s+s1}{\PYZsq{}}\PY{n}{wav}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{][}\PY{l+s+s1}{\PYZsq{}}\PY{n}{ecgWaveformMXG}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{][}\PY{l+s+s1}{\PYZsq{}}\PY{n}{ecgWaveform}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{][0][}\PY{l+s+s1}{\PYZsq{}}\PY{n+nd}{@V}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{].split()).astype(}\PY{l+s+s1}{\PYZsq{}}\PY{n+nb}{int}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{)}
+\end{Verbatim}
+
+
+    { Note }
+
+If you are obtaining an AttributeError: GEMuseXMLReader instance has no
+attribute 'dataObject' add the code shown in Figure 10.2 immediately
+before the pl.figure() line.
+
+    { Explore }
+
+\begin{verbatim}
+You can learn more about XML through the documentation available at:
+\end{verbatim}
+
+ https://www.w3schools.com/xml/xml\_whatis.asp 
+
+    \textbf{JSON} (JavaScript Object Notation) is often an advantageous
+format as well. It's a lightweight format for storing and transporting
+data, much used when data is sent from a server to a web page.
+
+    \#\#
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Going Beyond Plain Text
+\end{enumerate}
+
+Regardless of having a semantic-driven organization (e.g. like in XML)
+or not (e.g. like in CSV), plain text formats are prone to performance
+issues when large volumes of data are being dealt with. For example a
+measurement sampled by an ADC with 10-bit resolution (e.g. 1023) stored
+as human-readable plain text takes up at least 32 bits (i.e. 8-bit per
+digit). Although often sacrificing the semantics, to overcome this
+issue, several binary formats for biosignal data storage have been
+proposed, examples of which are the Extensible Biosignal File Format
+(EBS) {[}4{]}, the European Data Format (EDF+) {[}5{]}, the Medical
+Waveform Format Encoding Rules (MFER) {[}6{]}, and the WaveForm DataBase
+(WFDB) {[}7{]}. A compromise solution between performance and semantics
+appeared recently in the form of the Hierarchical Data Format (HDF), a
+self-describing format designed to store and organize large amounts of
+data {[}8{]}; the file structure has a hierarchical nature, based on two
+major types of objects: Datasets (multidimensional arrays of a
+homogeneous type), and Groups (container structures which can hold
+datasets and other groups). In this exercise we will get familiar with
+the HDF5 file format:
+
+\begin{verbatim}
+1. Download and install the HDFView visualizer:
+\end{verbatim}
+
+https://support.hdfgroup.org/products/java/release/download.html
+
+\begin{verbatim}
+2. Download the file with sample data stored in HDF5 available at:
+\end{verbatim}
+
+https://www.dropbox.com/s/gmae4jn9uc1rn0c/000780B383D5.h5?dl=0
+
+\begin{verbatim}
+3. Open the file with sample data on the HDFView software and explore its content
+
+4. As you can see, the content is stored in a hierarchical way, with each node of the tree storing metadata and the leafs corresponding to either time series or other relevant data from the recording session
+
+5. Create a new (empty) Python script in the Spyder IDE
+
+6. Copy the code snippet shown in Figure 10.3 to your script; note how the HDF5 file content is loaded (in Python at least) as a dictionary-like structure
+
+7. Run your script and analize the output; you should see a plot corresponding to raw ECG data (acquired from channel 2)
+\end{verbatim}
+
+Example code to read a ECG time series stored in the example HDF5,
+plotting in on a chart and displaying some of the metadata on the
+console:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{k+kn}{import} \PY{n+nn}{pylab} \PY{k}{as} \PY{n+nn}{pl}
+        \PY{k+kn}{import} \PY{n+nn}{h5py}
+        
+        \PY{n}{HDFData} \PY{o}{=} \PY{n}{h5py} \PY{o}{.} \PY{n}{F} \PY{n}{i} \PY{n}{l} \PY{n}{e} \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{000780B383D5.h5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{root} \PY{o}{=} \PY{n}{HDFData} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{00:07:80:B3:83:D5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{root}\PY{o}{.}\PY{n}{attrs}\PY{o}{.}\PY{n}{items}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+        \PY{n}{data} \PY{o}{=} \PY{n}{root}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{raw}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{channel2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+        
+        \PY{n}{pl}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{p}{)}
+        \PY{n}{pl}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{data}\PY{p}{)}
+        \PY{n}{pl}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    { Explore }
+
+\begin{verbatim}
+More information about the HDF file format can be found at:
+\end{verbatim}
+
+ https://www.hdfgroup.org/solutions/hdf5/ 
+
+    \section{III. Explore}\label{iii.-explore}
+
+    \subsubsection{1. Quiz}\label{quiz}
+
+\begin{verbatim}
+1. Using the information available from the file used in Section II.1., what was the sampling rate used for data acquisition?
+
+2. Based on your current knowledge about the typical traces of the most commonly used biosignals, which column contains Electrodermal Activity (EDA) sensor data in the file used in Section 10.4? Explain how you reached your conclusion?
+
+3. Modify the script used in Section II.2. to plot, in a single figure, the data for all the waveforms stored on file arranged in a grid and duly labelled. Show the obtained result.
+
+4. Expand the script used in Section II.2. to determine and print to the console the average heart rate on the recording session with the support of the BioSPPy toolbox (e.g. based on Lead I data).
+
+5. Create a new program using the learnings from the exercise of Section II.3. to automatically traverse and print to the console the tree structure with the HDF5 file content
+\end{verbatim}
+
+    \#\#
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Further Reading
+\end{enumerate}
+
+{[}1{]} D. Brooks, P. Hunter, B. Smaill, and M. Titchener, ``BiosignalML
+- a meta- model for biosignals,'' in Eng. in Medicine and Biology
+Society,EMBC, 2011 Annual International Conference of the IEEE, 2011,
+pp. 5670 --5673.
+
+{[}2{]} A. Kokkinaki, I. Chouvarda, and N. Maglaveras, ``An
+ontology-based ap- proach facilitating unified querying of biosignals
+and patient records,'' in Eng. in Medicine and Biology Society, 2008.
+EMBS 2008. 30th Annual In- ternational Conference of the IEEE, aug.
+2008, pp. 2861 --2864.
+
+{[}3{]} D. Brooks, ``Extensible biosignal metadata a model for
+physiological time- series data,'' in Eng. in Medicine and Biology
+Society, 2009. EMBC 2009. Annual International Conference of the IEEE,
+2009, pp. 3881 --3884.
+
+{[}4{]} G. Hellmann, M. Kuhn, M. Prosch, and M. Spreng, ``Extensible
+biosignal (EBS) file format: simple method for eeg data exchange,''
+Electroencephalography and Clinical Neurophysiology, vol. 99, no. 5, pp.
+426 -- 431, 1996. {[}Online{]}. Available:
+http://www.sciencedirect.com/science/article/pii/S0013469496965025
+
+{[}5{]} B. Kemp and J. Olivan, ``European data format plus (EDF+), an
+edf alike standard format for the exchange of physiological data,''
+Clinical Neurophysiology, vol. 114, no. 9, pp. 1755 -- 1761, 2003.
+{[}Online{]}. Available:
+http://www.sciencedirect.com/science/article/pii/S1388245703001238
+
+{[}6{]} MFER, ``Medical waveform format encoding rules,''
+http://ecg.heart.or.jp/En/Index.htm, 2003. {[}Online{]}. Available:
+http://ecg.heart.or.jp/En/Index.htm
+
+{[}7{]} A. L. Goldberger, L. A. N. Amaral, L. Glass, J. M. Hausdorff, P.
+C. Ivanov, R. G. Mark, J. E. Mietus, G. B. Moody, C.-K. Peng, and H. E.
+Stanley, ``PhysioBank, PhysioToolkit, and PhysioNet: Components of a new
+research resource for complex physiologic signals,'' Circulation, vol.
+101, no. 23, pp. e215--e220, 2000.
+
+{[}8{]} HDF, ``The HDF group. Hierarchical data format version 5,
+2000-2010.'' www.hdfgroup.org/HDF5, 2010. {[}Online{]}. Available:
+www.hdfgroup.org/HDF5/
+
+     
+
+    { Please provide us your feedback {
+\href{https://forms.gle/C8TdLQUAS9r8BNJM8}{here}}.} { Suggestions are
+welcome! }
+
+    \texttt{Contributors:\ Prof.\ Hugo\ Silva;\ Joana\ Pinto}
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
