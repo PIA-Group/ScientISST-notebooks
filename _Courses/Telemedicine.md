@@ -26,7 +26,7 @@
 
 
 ## Program
-NB code | Subject | Date | Responsible | Chapter | Notebook 
+NB code | Subject | Date | Lecturer | Chapter | Notebook 
 --- | --- | ---| --- | --- | ---
 A002 | Open Signals | X/10/2020 | Prof. | A - Introduction to Signal Acquisition |   [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/A.Signal_Acquisition/A001%20Open%20Signals.ipynb) 
 A004 | Arduino Essentials | X/10/2020 | Prof. | A - Introduction to Signal Acquisition |   [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/A.Signal_Acquisition/A004%20Arduino%20Essentials.ipynb)
