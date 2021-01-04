@@ -12,7 +12,7 @@
 Chapter | Notebooks| -
 --- | --- | --- 
 A - Introduction to Signal Acquisition |    [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/A.Signal_Acquisition) 
-|:  Rowspan is 4 :|| ^^ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PIA-Group/ScientIST-notebooks/blob/A.Signal_Acquisition/blob/) ||
+| ^^ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PIA-Group/ScientIST-notebooks/blob/A.Signal_Acquisition/blob/) ||
 B - Graphical User Interface | [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/B.Graphical_User_Interface) 
 C - Signal Processing |  [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/C.Signal_Processing) 
 D - Feature Extraction | [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/D.Feature_Extraction) 
