@@ -28,7 +28,7 @@ Prof. João Miguel Sanches ([jmrs@tecnico.ulisboa.pt](mailto:jmrs@tecnico.ulisbo
 Prof. Hugo Silva  ([hsilva@lx.it.pt](mailto:hsilva@lx.it.pt))
 
 ## Program
-NB code | Subject | Date | Faculty | Chapter | Notebook 
+NB code | Subject | Date | Lecturer | Chapter | Notebook 
 --- | --- | ---| --- | --- | ---
 A009 | Equipment of electronics laboratory and basic circuits | X/03/2021 | Prof. | A - Introduction to Signal Acquisition |  [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/blob/master/A.Signal_Acquisition/A009%20Equipment%20of%20electronics%20laboratory%20and%20basic%20circuits.ipynb)
 A008 | Frequency response | X/03/2021 | Prof. | A - Introduction to Signal Acquisition |   [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/blob/master/A.Signal_Acquisition/A008%20Frequency%20response.ipynb) 
