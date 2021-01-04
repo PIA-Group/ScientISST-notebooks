@@ -19,7 +19,5 @@ E - Classification |  [![Binder](http://mybinder.org/badge_logo.svg)](http://myb
 F - Applications |   [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/F.Applications)  |
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PIA-Group/ScientIST-notebooks/blob/master) 
-
-## Notebooks Repository
 [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree)
  
