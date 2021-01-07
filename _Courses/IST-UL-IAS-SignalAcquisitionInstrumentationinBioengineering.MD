@@ -25,6 +25,7 @@ During this curricular unit, [Signal Acquisition Instrumentation in Bioengineeri
 
 #### Coordinator:
 Prof. João Miguel Sanches ([jmrs@tecnico.ulisboa.pt](mailto:jmrs@tecnico.ulisboa.pt))
+
 Prof. Hugo Silva  ([hsilva@lx.it.pt](mailto:hsilva@lx.it.pt))
 
 ## Program
