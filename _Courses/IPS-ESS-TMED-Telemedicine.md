@@ -28,7 +28,8 @@
 ## Program
 NB code | Subject | Date | Lecturer | Chapter | Notebook 
 --- | --- | ---| --- | --- | ---
-A002 | Open Signals | X/10/2020 | Prof. | A - Introduction to Signal Acquisition |   [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/A.Signal_Acquisition/A001%20Open%20Signals.ipynb) 
+A002 | Open Signals | X/10/2020 | Prof. | A - Introduction to Signal Acquisition |   [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/A.Signal_Acquisition/A001%20Open%20Signals.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PIA-Group/ScientIST-notebooks/blob/master?urlpath=lab/tree/A.Signal_Acquisition/A001%20Open%20Signals.ipynb) 
+
 A004 | Arduino Essentials | X/10/2020 | Prof. | A - Introduction to Signal Acquisition |   [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/A.Signal_Acquisition/A004%20Arduino%20Essentials.ipynb)
 C001 | Analog Signals | X/10/2020 | Prof. | C - Signal Processing |  [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/C.Signal_Processing/C001%20Analog%20Signals.ipynb)
 C002 | Data transmission | X/10/2020 | Prof. | C - Signal Processing |  [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/PIA-Group/ScientIST-notebooks/master?urlpath=lab/tree/C.Signal_Processing/C002%20Data%20Transmission.ipynb)
