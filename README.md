@@ -3,7 +3,7 @@
 
 ## Courses
 
-- [IEB - Introductionto Biomedical Engineering](https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Courses/IST-UL-IEB-IntroductiontoBiomedicalEngineering.md) - ```Instituto Superior Técnico, Universidade de Lisboa```
+- [IEB - Introduction to Biomedical Engineering](https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Courses/IST-UL-IEB-IntroductiontoBiomedicalEngineering.md) - ```Instituto Superior Técnico, Universidade de Lisboa```
 - [TMED - Telemedicine](https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Courses/IPS-ESS-TMED-Telemedicine.md) - ```Escola Superior de Tecnologia de Setúbal, IPS```
 - [IAS - Signal Acquisition Instrumentation in Bioengineering](https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Courses/IST-UL-IAS-SignalAcquisitionInstrumentationinBioengineering.MD) - ```Instituto Superior Técnico, Universidade de Lisboa```
 
