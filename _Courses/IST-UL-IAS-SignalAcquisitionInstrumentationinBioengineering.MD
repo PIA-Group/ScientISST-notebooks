@@ -1,4 +1,4 @@
-# Introduction of Biomedical Engineering (IBE)
+# SignalAcquisitionInstrumentationinBioengineering (IAS)
 ```Mestrado Integrado em Engenharia Biomédica``` | ```Instituto Superior Técnico, Universidade de Lisboa``` | ```2020-2021```
 
 ## Description & Objectives
