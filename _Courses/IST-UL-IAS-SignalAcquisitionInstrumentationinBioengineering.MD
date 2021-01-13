@@ -1,4 +1,4 @@
-# SignalAcquisitionInstrumentationinBioengineering (IAS)
+# Signal Acquisition Instrumentation in Bioengineering (IAS)
 ```Mestrado Integrado em Engenharia Biomédica``` | ```Instituto Superior Técnico, Universidade de Lisboa``` | ```2020-2021```
 
 ## Description & Objectives
