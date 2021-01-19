@@ -28,7 +28,6 @@ This  [course](https://fenix.tecnico.ulisboa.pt/disciplinas/AAB46/2020-2021/2-se
 Prof. Ana Luisa Nobre Fred ([afred@lx.it.pt](mailto:afred@lx.it.pt))
 
 
-https://github.com/PIA-Group/ScientIST-notebooks/blob/master/E.Classification/
 ## Program
 NB code | Subject | Date | Lecturer | Chapter | Notebook 
 --- | --- | ---| --- | --- | ---
