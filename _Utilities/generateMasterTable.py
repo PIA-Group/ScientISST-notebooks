@@ -3,7 +3,10 @@ from datetime import datetime
 import json
 import numpy as np
 
+"""
+This script is used to go through the whole repository directory and build a .md file containing a comprehensive table of contents and information regarding all notebooks found.
 
+"""
 
 def dirFiles(dir=''):
     l_dir = sorted(os.listdir(dir))

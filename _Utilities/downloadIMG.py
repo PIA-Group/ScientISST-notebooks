@@ -3,12 +3,12 @@ import os
 from pywget import wget
 import requests
 
-'''
+"""
 This script allows the automatic collection of python code from formatted notebooks.
 
 An example is provided.
 
-'''
+"""
 
 def findImageTag(source=None):
     """

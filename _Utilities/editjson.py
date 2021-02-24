@@ -1,12 +1,12 @@
 import json
 import os
-'''
+"""
 This script allows the automatic formatting of non-formatted notebooks, using the 
 scientIST version template, and to make plain notebooks from formatted notebooks.
 
 An example is provided using an empty NB (emptyNB.ipynb).
 
-'''
+"""
 
 def openTemplateDict (document="dictNB.txt"):
     """ 
