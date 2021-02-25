@@ -5,10 +5,18 @@ import numpy as np
 
 """
 This script is used to go through the whole repository directory and build a .md file containing a comprehensive table of contents and information regarding all notebooks found.
-
 """
 
 def dirFiles(dir=''):
+    """
+    Finds notebooks in a directory and collects relevant information from each.
+    
+    Parameters
+    ----------
+    dir: string
+        Directory path of the repository.
+    """
+
     l_dir = sorted(os.listdir(dir))
     
     for f_name in l_dir:
@@ -67,7 +75,6 @@ def dirFiles(dir=''):
             md_file.write(f_name[4:] +' | ')
             md_file.write(chapter +' | ')
             md_file.write(str(tags[:-1])+'|')
-            #md_file.write('1hour'+'|')
             md_file.write(author +'|')
             md_file.write(str(datetime_)[0:10]+'|'+'\n')
         print('i')

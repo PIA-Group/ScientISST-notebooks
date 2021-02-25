@@ -1,21 +1,34 @@
 import json
 import os
 """
-This script allows the automatic collection of python code from formatted notebooks.
+This script allows the automatic collection of python code from ScientIST notebooks.
 
 An example is provided.
-
 """
-def collectPythonCode (self, notebook=".ipynb"):
-    """ 
+
+def collectPythonCode (notebook=".ipynb",folder=""):
+    """
     Open formatted scientIST notebook and retrieves a python script.
+
+    Parameters
+    ----------
+    notebook: str
+        Name of a .ipynb file.
+
+    folder: str
+        Directory of the folder where the notebook is located.
+    
+    Returns
+    -------
+    python_file: 
+        Python file containing the code collected in the notebook.
     """
     try:
-        f = open(notebook,"r")
+        f = open(folder+notebook,"r")
         print('i')
     except:
         notebook=notebook+'.ipynb'
-        f = open(notebook,"r")
+        f = open(folder+notebook,"r")
 
     # open and read notebook (json object)
     data = f.read()
@@ -37,20 +50,16 @@ def collectPythonCode (self, notebook=".ipynb"):
             python_file.write("\n")        
             len_cell=len(dict_['source'])
             for j in range(0,len_cell):
-                print(str(dict_['source'][j]))
-                print('j')
+
                 if str(dict_['source'][j]).startswith('!pip install') or str(dict_['source'][j]).startswith('%matplotlib notebook') or str(dict_['source'][j]).startswith('mpld3.enable_notebook()'):
                     python_file.write('#'+str(dict_['source'][j]))
                 else:
                     python_file.write(str(dict_['source'][j]))
+
     python_file.close()
 
+    return python_file
 
-
-## pip install como comentário
-## excluir mlp3
-## Utilities fora dos templates
-# por dentro dos utilities
 
 # EXAMPLE
-#collectPythonCode(notebook="F001 Swimming.ipynb")
+collectPythonCode(notebook="F001 Swimming.ipynb",folder="../F.Applications/")

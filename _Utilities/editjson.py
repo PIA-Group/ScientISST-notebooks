@@ -4,14 +4,24 @@ import os
 This script allows the automatic formatting of non-formatted notebooks, using the 
 scientIST version template, and to make plain notebooks from formatted notebooks.
 
-An example is provided using an empty NB (emptyNB.ipynb).
-
+An example is provided at the end of the script, using an empty NB (emptyNB.ipynb).
 """
 
 def openTemplateDict (document="dictNB.txt"):
-    """ 
+    """
     This .txt file is a dictionary that includes the styling information of the scientIST template version.
     Note: the .txt file must be updated in case the scientIST template version is changed.
+
+    
+    Parameters
+    ----------
+    document: .txt file
+        Dictionary that one wants to read.
+
+    Returns
+    -------
+    jsonObjNB: .json 
+        .json object containing the dictionary's information.
     """
     teste=open(document,"r")
     dataNB = teste.read()
@@ -20,9 +30,20 @@ def openTemplateDict (document="dictNB.txt"):
     return jsonObjNB
 
 def makePlain (notebook="testeNB.ipynb"):
-    """ 
-    Open FORMATTED scientIST version and retrieves a PLAIN notebook.
     """
+    Open FORMATTED scientIST version and retrieves a PLAIN notebook.
+    
+    Parameters
+    ----------
+    notebook: .ipynb file
+        Notebook that one wants to make plain.
+
+    Returns
+    -------
+    jsonObjNB: .json 
+        .json object containing the updated dictionary's information.
+    """
+
     try:
         f = open(notebook,"r")
         print('i')
@@ -88,11 +109,24 @@ def makePlain (notebook="testeNB.ipynb"):
     with open(notebook, 'w') as json_data:
             json.dump(jsonObj, json_data)
 
+    return jsonObjNB
+
 
 def makeFormatted (notebook="emptyNB"):
-    """ 
-    Open PLAIN notebook and retrieves its FORMATTED scientIST version.
     """
+    Open PLAIN notebook and retrieves its FORMATTED scientIST version.
+    
+    Parameters
+    ----------
+    notebook: .ipynb file
+        Plain notebook to which one wants to apply the scientIST notebook's styling.
+
+    Returns
+    -------
+    jsonObjNB: .json 
+        .json object containing the updated dictionary's information.
+    """
+
     try:
         f = open(notebook,"r")
     except:
@@ -152,10 +186,16 @@ def makeFormatted (notebook="emptyNB"):
 makeFormatted(notebook="emptyNB")
 #makePlain(notebook="emptyNB")
 
-def dirFiles(dir='ScientIST-notebooks/folder_name/'):
+def formatAll(dir='ScientIST-notebooks/folder_name/'):
     """
     This function can be used to format several notebooks inside a folder.
+    
+    Parameters
+    ----------
+    dir: string
+        Directory path of the folder containing the notebooks to format.
     """
+    
     l_dir = os.listdir(dir)
     for f_name in l_dir:
         if f_name not in ['Autoencoders_Resp.ipynb']:

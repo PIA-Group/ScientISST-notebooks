@@ -6,13 +6,25 @@ import requests
 """
 This script allows the automatic collection of python code from formatted notebooks.
 
-An example is provided.
-
+An example is provided at the end of the script.
 """
 
-def findImageTag(source=None):
+def findImageTag (source=None):
     """
-    Receives string and finds the img tag and retrieves the link of its source.
+    Receives string, finds the img tag and retrieves the link of its source.
+    
+    Parameters
+    ----------
+    source: str
+        String within which one wants to find img tags and collect image.
+
+    Returns
+    -------
+    link: str
+        Source of the images found, i.e. the url link where the image is stored.
+
+    index_end: int
+        index of the last element of the link found.
     """
     len_source=len(source)
     source_ =str(source)
@@ -33,6 +45,12 @@ def findImageTag(source=None):
 def savesNBimages (notebook=None, folder=None):
     """ 
     Receives a Notebook and Folder directory, and collects and save its images locally.
+    Parameters
+    ----------
+    notebook: str
+        Directory of a .ipynb file.
+    notebook: str
+        Directory where images found are to be saved.
     """
     try:
         f = open(notebook,"r")
@@ -75,15 +93,14 @@ def savesNBimages (notebook=None, folder=None):
                     print('ALERT', notebook)       
                     
             
-def savesNBimagesFolder(dir=None):
+def savesNBimagesFolder (dir=None):
     """
+    This function can be used to collect images from the notebooks inside a repository. Firstly, it identifies de directory structure, i.e. which folders there are inside it. Then it creates folders with the same names (+'_IMG') and saves the respective images accordingly. 
 
-    This function can be used to collect images from the notebooks inside a repository.
-    It receives the directory path of the repository (folder) from whose notebook the images should be extracted.
-    
-    Firstly, it identifies de directory structure inside the father directory, i.e. which folders there are inside it. 
-    Then it creates folders with the same names (+'_IMG') and saves the respective images inside them. 
-
+    Parameters
+    ----------
+    dir: str
+        Directory of a notebooks's repository folder.
     """
 
     folders=next(os.walk(dir))[1]
@@ -120,5 +137,5 @@ def savesNBimagesFolder(dir=None):
 
 #savesNBimages(notebook="F001 Swimming.ipynb", folder="./AllImages")
 
-savesNBimagesFolder(dir='ScientIST-notebooks')
+#savesNBimagesFolder(dir='ScientIST-notebooks')
 
