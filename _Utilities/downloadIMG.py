@@ -21,7 +21,7 @@ def findImageTag (source=None):
     Returns
     -------
     link: str
-        Source of the images found, i.e. the url link where the image is stored.
+        Source of the images found, i.e. the URL link where the image is stored.
 
     index_end: int
         index of the last element of the link found.
@@ -42,6 +42,75 @@ def findImageTag (source=None):
 
     return link, index_end
 
+def replaceImagePath (notebook=None, folder=None, segmentOld=None, segmentNew=None):
+    """ 
+    Receives string, finds the img tag and retrieves the link of its source. Receives a Notebook and Folder directory, and collects and save its images locally.
+    
+    Parameters
+    ----------
+    notebook: str (optional)
+        Directory of a .ipynb file.
+    
+    folder: str (optional)
+        Directory of a folder with .ipynb files, used instead of 'notebook' if one wants to make changes in the whole repository.
+
+    segmentOld: str
+        Part of the string to be removed.
+
+    segmentNew: str
+        New string to replace the string that will be removed.
+
+    """
+    if notebook is not None:
+        try:
+            f = open(notebook,"r")
+        except:
+            notebook=notebook+'.ipynb'
+            f = open(notebook,"r")
+
+        # open and read notebook (json object)
+        data = f.read()
+        jsonObj = json.loads(data)
+        jsonObj_=str(jsonObj).replace(segmentOld, segmentNew)
+        # becomes dict again
+        jsonObj=eval(jsonObj_)
+        f.seek(0) 
+
+
+    elif folder is not None:
+        dir=folder
+        folders=next(os.walk(dir))[1]
+        print(folders)
+        for j in folders:
+            #reads notebooks inside the folder j
+            print(j)
+            try:
+                #updates the directory path to be read
+                l_dir = os.listdir(dir+'/'+j+'/')
+                os.walk(l_dir)
+                for f_name in l_dir:                    
+                    if f_name.endswith('.ipynb'):
+                        try:
+                            notebook=dir+'/'+j+'/'+'/'+f_name
+                            f = open(notebook,"r")
+                            
+                            data = f.read()
+                            jsonObj = json.loads(data)
+                            jsonObj_=str(jsonObj).replace(segmentOld, segmentNew)
+                            jsonObj=eval(jsonObj_)
+                            f.seek(0) 
+                            
+                            print(notebook)
+                            with open(notebook, 'w') as json_data:
+                                json.dump(jsonObj, json_data)   
+                        except:
+                            print(' ')    
+                            
+
+            except:
+                print(' ')
+
+
 def savesNBimages (notebook=None, folder=None):
     """ 
     Receives a Notebook and Folder directory, and collects and save its images locally.
@@ -49,7 +118,7 @@ def savesNBimages (notebook=None, folder=None):
     ----------
     notebook: str
         Directory of a .ipynb file.
-    notebook: str
+    folder: str
         Directory where images found are to be saved.
     """
     try:
@@ -69,7 +138,6 @@ def savesNBimages (notebook=None, folder=None):
 
     # walks through the cells of the notebook
     length=len(jsonObj['cells'])
-    print('OOOO')
 
     for i in range(1,length-3):
         dict_=dict(jsonObj['cells'][i])
@@ -82,11 +150,6 @@ def savesNBimages (notebook=None, folder=None):
             index_end=0
             for c in range(0, nr_img):
                 link, index_end = findImageTag(source=source_[index_end:-1])
-
-                # save image locally
-                #if link not in ['attachment:sciencejournal.png','attachment:google-play-app-store-badges-5926dec63df78cbe7eaf4f9e.jpg','attachment:Screen%20Shot%202020-02-26%20at%2016.21.45.png','attachment:Screenshot_20200226_162843_com.google.android.apps.forscience.whistlepunk.jpg','attachment:Screenshot_20200226_185831_com.google.android.apps.forscience.whistlepunk.jpg','attachment:Screenshot_20200226_185903_com.google.android.apps.forscience.whistlepunk.jpg','attachment:Screenshot_20200226_185933_com.google.android.apps.forscience.whistlepunk.jpg','attachment:Screenshot_20200226_190125_com.google.android.apps.forscience.whistlepunk.jpg','attachment:Screenshot_20200227_000702_com.google.android.apps.forscience.whistlepunk.jpg','attachment:Screenshot_20200227_000805_com.google.android.apps.forscience.whistlepunk%202.jpg','attachment:ArduinoIDE.png','attachment:ArduinoIDEexplained.png','attachment:ComputerUSB.png','attachment:ArduinoUSB.png',
-                #'attachment:ArduinoBoard.png','attachment:ArduinoPort.png','attachment:ErrorSketch.png','attachment:ArduinoLED.png',
-                #'attachment:Blink.png','attachment:MultiBlink.png','attachment:Button.png']:
                 try:
                     wget.download(link, folder)    
                 except:
@@ -135,7 +198,10 @@ def savesNBimagesFolder (dir=None):
 
 # EXAMPLE
 
-#savesNBimages(notebook="F001 Swimming.ipynb", folder="./AllImages")
+#savesNBimages(notebook="A001 Open Signals.ipynb", folder="./AllImages")
 
 #savesNBimagesFolder(dir='ScientIST-notebooks')
 
+#replaceImagePath(notebook="../A.Signal_Acquisition/teste.ipynb", segmentOld='/X.Example_Files/', segmentNew='/_Resources/')
+
+#replaceImagePath(folder="../", segmentOld='/X.Example_Files/', segmentNew='/_Resources/')
