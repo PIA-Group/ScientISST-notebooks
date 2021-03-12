@@ -21,10 +21,10 @@ This  [course](https://fenix.tecnico.ulisboa.pt/disciplinas/AAB46/2020-2021/2-se
 
 `Method:` Online + In-person (when applicable)
 
-`Classes:` Seminars + Practical classes based on the program below
+`Classes:` Theoretical lectures + Labs + Project
  
 
-#### Coordinator:
+#### Coordinator & Lecturer:
 Prof. Ana Luisa Nobre Fred ([afred@lx.it.pt](mailto:afred@lx.it.pt))
 
 
