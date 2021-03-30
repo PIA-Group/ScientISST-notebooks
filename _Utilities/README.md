@@ -2,7 +2,9 @@
 Global Documentation - ScientISST Utilities 
 ============================================
 
-# readCode.py
+#  
+
+## readCode.py
 
 ## 
 This script allows the automatic collection of python code from ScientIST notebooks.
@@ -10,11 +12,11 @@ This script allows the automatic collection of python code from ScientIST notebo
 An example is provided.
 
 
-## This script contains the following functions.
+### This script contains the following functions.
 
-##  collectPythonCode 
+###  collectPythonCode 
 
-### 
+#### 
     Open formatted scientIST notebook and retrieves a python script.
 
     Parameters
@@ -31,9 +33,9 @@ An example is provided.
         Python file containing the code collected in the notebook.
     
 
-##  creatNB
+###  creatNB
 
-### 
+#### 
     Opens python script and retrieves a notebook file containing the code collected.
 
     Parameters
@@ -50,9 +52,9 @@ An example is provided.
         .ipynb file in accordance with the ScientIST Notebook styling.
     
 
-##  createNBfromScript 
+###  createNBfromScript 
 
-### 
+#### 
     Opens python script and retrieves a notebook file containing the code collected.
 
     Parameters
@@ -69,17 +71,21 @@ An example is provided.
         Notebook file containing the code collected in the original python script.
     
 
-# globalDocumentationMD.py
+#  
+
+## globalDocumentationMD.py
 
 ## '
         i=s.find(p)
         i2_ = s.find('
 
-## This script contains the following functions.
+### This script contains the following functions.
 
-## 
+### 
 
-# editjson.py
+#  
+
+## editjson.py
 
 ## 
 This script allows the automatic formatting of non-formatted notebooks, using the 
@@ -88,13 +94,13 @@ scientIST version template, and to make plain notebooks from formatted notebooks
 An example is provided at the end of the script, using an empty NB (emptyNB.ipynb).
 
 
-## This script contains the following functions.
-
-## 
-
-##  openTemplateDict 
+### This script contains the following functions.
 
 ### 
+
+###  openTemplateDict 
+
+#### 
     This .txt file is a dictionary that includes the styling information of the scientIST template version.
     Note: the .txt file must be updated in case the scientIST template version is changed.
 
@@ -110,9 +116,9 @@ An example is provided at the end of the script, using an empty NB (emptyNB.ipyn
         .json object containing the dictionary's information.
     
 
-##  makePlain 
+###  makePlain 
 
-### 
+#### 
     Open FORMATTED scientIST version and retrieves a PLAIN notebook.
     
     Parameters
@@ -126,9 +132,9 @@ An example is provided at the end of the script, using an empty NB (emptyNB.ipyn
         .json object containing the updated dictionary's information.
     
 
-##  makeFormatted 
+###  makeFormatted 
 
-### 
+#### 
     Open PLAIN notebook and retrieves its FORMATTED scientIST version.
     
     Parameters
@@ -142,9 +148,9 @@ An example is provided at the end of the script, using an empty NB (emptyNB.ipyn
         .json object containing the updated dictionary's information.
     
 
-##  formatAll
+###  formatAll
 
-### 
+#### 
     This function can be used to format several notebooks inside a folder.
     
     Parameters
@@ -153,7 +159,9 @@ An example is provided at the end of the script, using an empty NB (emptyNB.ipyn
         Directory path of the folder containing the notebooks to format.
     
 
-# downloadIMG.py
+#  
+
+## downloadIMG.py
 
 ## 
 This script allows the automatic collection of python code from formatted notebooks.
@@ -161,11 +169,11 @@ This script allows the automatic collection of python code from formatted notebo
 An example is provided at the end of the script.
 
 
-## This script contains the following functions.
+### This script contains the following functions.
 
-##  findImageTag 
+###  findImageTag 
 
-### 
+#### 
     Receives string, finds the img tag and retrieves the link of its source.
     
     Parameters
@@ -182,9 +190,9 @@ An example is provided at the end of the script.
         index of the last element of the link found.
     
 
-##  replaceImagePath 
+###  replaceImagePath 
 
-###  
+####  
     Receives string, finds the img tag and retrieves the link of its source. Receives a Notebook and Folder directory, and collects and save its images locally.
     
     Parameters
@@ -203,9 +211,9 @@ An example is provided at the end of the script.
 
     
 
-##  savesNBimages 
+###  savesNBimages 
 
-###  
+####  
     Receives a Notebook and Folder directory, and collects and save its images locally.
     Parameters
     ----------
@@ -215,9 +223,9 @@ An example is provided at the end of the script.
         Directory where images found are to be saved.
     
 
-##  savesNBimagesFolder 
+###  savesNBimagesFolder 
 
-### 
+#### 
     This function can be used to collect images from the notebooks inside a repository. Firstly, it identifies de directory structure, i.e. which folders there are inside it. Then it creates folders with the same names (+'_IMG') and saves the respective images accordingly. 
 
     Parameters
@@ -226,17 +234,19 @@ An example is provided at the end of the script.
         Directory of a notebooks's repository folder.
     
 
-# generateMasterTable.py
+#  
+
+## generateMasterTable.py
 
 ## 
 This script is used to go through the whole repository directory and build a .md file containing a comprehensive table of contents and information regarding all notebooks found.
 
 
-## This script contains the following functions.
+### This script contains the following functions.
 
-##  dirFiles
+###  dirFiles
 
-### 
+#### 
     Finds notebooks in a directory and collects relevant information from each.
     
     Parameters
