@@ -5,11 +5,7 @@ from mdutils.mdutils import MdUtils
 
 mdFile = MdUtils(file_name='README',title='Global Documentation - ScientISST Utilities ')
 
-
-
-
-#pdf.set_author('IT - Instituto de Telecomunicações, Lisboa')
-#pdf.output(pdf_name,'F')
+mdFile.new_header(level=4, 'IT - Instituto de Telecomunicações, Lisboa')
 
 # body of the document
 dir='.'
