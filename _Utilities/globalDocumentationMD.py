@@ -28,7 +28,7 @@ for f_name in l_dir:
         mdFile.new_header(level=2, title=txt)
 
 
-        mdFile.new_header(level=3, title='This script contains the following functions.')
+        mdFile.new_header(level=2, title='This script contains the following functions.')
         
         # find functions
         p="def"
@@ -54,7 +54,7 @@ for f_name in l_dir:
             if len(txt) != 0: # cope with functions that use """ within the code (yet not for commenting)
                 if function_name[3]!='"':
                     mdFile.new_header(level=3, title=txt)
-            if txt != '':
+            if txt != '' and txt != ' ':
                 # finds description of the function
                 p_='"""'
                 i1_=s.find(p_, i2)

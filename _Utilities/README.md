@@ -12,7 +12,7 @@ This script allows the automatic collection of python code from ScientIST notebo
 An example is provided.
 
 
-### This script contains the following functions.
+## This script contains the following functions.
 
 ###  collectPythonCode 
 
@@ -79,7 +79,7 @@ An example is provided.
         i=s.find(p)
         i2_ = s.find('
 
-### This script contains the following functions.
+## This script contains the following functions.
 
 ### 
 
@@ -94,7 +94,7 @@ scientIST version template, and to make plain notebooks from formatted notebooks
 An example is provided at the end of the script, using an empty NB (emptyNB.ipynb).
 
 
-### This script contains the following functions.
+## This script contains the following functions.
 
 ### 
 
@@ -169,7 +169,7 @@ This script allows the automatic collection of python code from formatted notebo
 An example is provided at the end of the script.
 
 
-### This script contains the following functions.
+## This script contains the following functions.
 
 ###  findImageTag 
 
@@ -242,7 +242,7 @@ An example is provided at the end of the script.
 This script is used to go through the whole repository directory and build a .md file containing a comprehensive table of contents and information regarding all notebooks found.
 
 
-### This script contains the following functions.
+## This script contains the following functions.
 
 ###  dirFiles
 
