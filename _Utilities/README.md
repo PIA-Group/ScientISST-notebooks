@@ -16,7 +16,7 @@ An example is provided.
 This script contains the following functions.
 ###  collectPythonCode 
 
-#### 
+### 
     Open formatted scientIST notebook and retrieves a python script.
 
     Parameters
