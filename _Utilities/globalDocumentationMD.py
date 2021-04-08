@@ -25,10 +25,10 @@ for f_name in l_dir:
         i2_ = s.find('"""', i+3)
         global_description=data[i:i2_]
         txt=global_description[3:]
-        mdFile.new_header(level=2, title=txt)
+        mdFile.new_paragraph(txt)
 
 
-        mdFile.new_header(level=2, title='This script contains the following functions.')
+        mdFile.new_paragraph('This script contains the following functions.')
         
         # find functions
         p="def"
