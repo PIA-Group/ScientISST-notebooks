@@ -71,19 +71,12 @@ This script contains the following functions.
         Notebook file containing the code collected in the original python script.
     
 
-#  
 
 ## globalDocumentationMD.py
 
 
-'
-        i=s.find(p)
-        i2_ = s.find('
-
 This script contains the following functions.
-### 
 
-#  
 
 ## editjson.py
 
