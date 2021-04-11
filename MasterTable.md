@@ -1,4 +1,4 @@
-# ScientIST Notebooks 
+# ScientISST Notebooks 
  This Table provides an overview to the complete set of notebooks made available in this repository. 
  
  These are independent and can be selected independently and organized as most suits the purpose of the course.  
