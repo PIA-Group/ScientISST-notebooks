@@ -4,7 +4,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# <div  style=\"color:#303030;font-family:'arial blACK', sans-serif,monospace; text-align: center; padding: 50px 0; vertical-align:middle;\" > <img src=\"https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Resources/Images/Lightbulb.png?raw=true\" style=\" background:#00a0e4;border-radius:10px;width:150px;text-align:left; margin-left:10%\"  /> <span style=\"position:relative; bottom:70px; margin-left:5%\">    Template - Example </span> </div>"
+    "<div  style=\"color:#303030;font-family:'arial blACK', sans-serif,monospace; text-align: center; padding: 50px 0; vertical-align:middle;\" > <img src=\"https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Resources/Images/Lightbulb.png?raw=true\" style=\" background:#00a0e4;border-radius:10px;width:150px;text-align:left; margin-left:10%\"  /> <span style=\"position:relative; bottom:70px; margin-left:5%; font-size:170%;\">    Template - Example </span> </div>"
    ]
   },
   {

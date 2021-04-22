@@ -181,4 +181,4 @@ def createNBfromScript (nameNB="test", script="../../ECG.py"):
 #collectPythonCode(notebook="F001 Swimming.ipynb",folder="../F.Applications/")
 
 #creatNB()    
-createNBfromScript(nameNB="ECG", script="../../ECG.py")
+#createNBfromScript(nameNB="ECG", script="../../ECG.py")

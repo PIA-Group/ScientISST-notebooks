@@ -198,11 +198,98 @@ def formatAll(dir='ScientIST-notebooks/folder_name/'):
     
     l_dir = os.listdir(dir)
     for f_name in l_dir:
-        if f_name not in ['Autoencoders_Resp.ipynb']:
-            if f_name.endswith('.ipynb'):
+        if f_name.endswith('.ipynb'):
                 path=dir + f_name
                 print(f_name)
                 makePlain(notebook=path)
                 makeFormatted(notebook=path)
 
 #dirFiles()
+
+
+def replaceSegment (notebook=None, folder=None, segmentOld=None, segmentNew=None):
+    """ 
+    Receives string, finds the img tag and retrieves the link of its source. Receives a Notebook and Folder directory, and collects and save its images locally.
+    
+    Parameters
+    ----------
+    notebook: str (optional)
+        Directory of a .ipynb file.
+    
+    folder: str (optional)
+        Directory of a folder with .ipynb files, used instead of 'notebook' if one wants to make changes in the whole repository.
+
+    segmentOld: str
+        Part of the string to be removed.
+
+    segmentNew: str
+        New string to replace the string that will be removed.
+
+    """
+    if notebook is not None:
+        try:
+            f = open(notebook,"r")
+        except:
+            notebook=notebook+'.ipynb'
+            f = open(notebook,"r")
+
+        # open and read notebook (json object)
+        data = f.read()
+        jsonObj = json.loads(data)
+        #while str(jsonObj).find(segmentOld)!=-1:
+        jsonObj_=str(jsonObj).replace(segmentOld, segmentNew)
+        # becomes dict again
+        jsonObj=eval(jsonObj_)
+        f.seek(0) 
+        with open(notebook, 'w') as json_data:
+            json.dump(jsonObj, json_data)   
+
+    elif folder is not None:
+        dir=folder
+        folders=next(os.walk(dir))[1]
+        print(folders)
+        for j in folders:
+            #reads notebooks inside the folder j
+            print(j)
+            try:
+                #updates the directory path to be read
+                l_dir = os.listdir(dir+'/'+j+'/')
+                os.walk(l_dir)
+                for f_name in l_dir:                    
+                    if f_name.endswith('.ipynb'):
+                        try:
+                            notebook=dir+'/'+j+'/'+'/'+f_name
+                            f = open(notebook,"r")
+                            
+                            data = f.read()
+                            jsonObj = json.loads(data)
+                            jsonObj_=str(jsonObj).replace(segmentOld, segmentNew)
+                            jsonObj=eval(jsonObj_)
+                            f.seek(0) 
+                            
+                            print(notebook)
+                            with open(notebook, 'w') as json_data:
+                                json.dump(jsonObj, json_data)   
+                        except:
+                            print(' ')    
+                            
+
+            except:
+                print(' ')
+
+replaceSegment(folder='../',segmentOld='background:#00a0e4;', segmentNew='background:linear-gradient(to right,#FDC86E,#fbb144);')
+
+replaceSegment(folder='../',segmentOld="# <div  style=\"color:#303030;", segmentNew=" <div  style=\"color:#303030;")
+replaceSegment(folder='../',segmentOld="bottom:70px; margin-left:5%", segmentNew="bottom:70px; margin-left:5%;font-size:170%;")
+
+replaceSegment(folder='../',segmentOld='<div style="background:#00a0e4;color:white;', segmentNew='<div style="background:linear-gradient(to right,#FDC86E,#fbb144);color:white;')
+replaceSegment(folder='../',segmentOld='style="color:#00a0e4', segmentNew='style="color:#fbb144')
+
+replaceSegment(folder='../',segmentOld='background:#fada5e;', segmentNew='background:#fbb144;')
+replaceSegment(folder='../',segmentOld='background:#fff3c4;', segmentNew='background:#ffd08a;')
+replaceSegment(folder='../',segmentOld='background:#00bfc2', segmentNew='background:#48ba57')
+replaceSegment(folder='../',segmentOld='background:#9eddde;', segmentNew='background:#9de3a6;')
+replaceSegment(folder='../',segmentOld='background:#62d321;', segmentNew='background:#946db2;')
+replaceSegment(folder='../',segmentOld='background:#c5e8b0;', segmentNew='background:#d0b3e6;')
+replaceSegment(folder='../',segmentOld='background:#f26451;', segmentNew='background:#fe9b29;')
+replaceSegment(folder='../',segmentOld='background:#f09184;', segmentNew='background:#ffdab0;')

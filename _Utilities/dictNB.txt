@@ -1,9 +1,9 @@
-{"title": "# <div  style=\"color:#303030;font-family:'arial blACK', sans-serif,monospace; text-align: center; padding: 50px 0; vertical-align:middle;\" > <img src=\"https://www.nicepng.com/png/full/204-2043038_white-lightbulb-icon-light-bulb-icon-white.png\" style=\" background:#00a0e4;border-radius:10px;width:150px;text-align:left; margin-left:10%\"  /> <span style=\"position:relative; bottom:70px; margin-left:5%\">",
+{"title": "<div  style=\"color:#303030;font-family:'arial blACK', sans-serif,monospace; text-align: center; padding: 50px 0; vertical-align:middle;\" > <img src=\"https://github.com/PIA-Group/ScientIST-notebooks/blob/master/_Resources/Images/Lightbulb.png?raw=true\" style=\" background:linear-gradient(to right,#FDC86E,#fbb144);border-radius:10px;width:150px;text-align:left; margin-left:10%\"  /> <span style=\"position:relative; bottom:70px; margin-left:5% font-size:170%;\">  ",
 "title2":"</span> </div>", 
 "section":    "<br>\n",
-"section2": "<div style=\"width:100%; background:#00a0e4;font-family:'arial black',monospace; text-align: center; padding: 7px 0; border-radius: 5px 50px;margin-top:-15px\" >  </div>\n",
-"subsection": "## <div style=\"color:#00a0e4;\">",
-"subsection_": "## <div style=\"color:#00a0e4\">",
+"section2": "<div class=\"title\"style=\"width:100%; background:linear-gradient(to right,#FDC86E,#fbb144);font-family:'arial black',monospace; text-align: center; padding: 7px 0; border-radius: 5px 50px;margin-top:-15px\" >  </div>\n",
+"subsection": "## <span style=\"color:#fbb144;\">",
+"subsection_": "## <span style=\"color:#fbb144;\">",
 "subsection2": "</div>\n", 
 "subfooter": {
    "cell_type": "markdown",
@@ -16,7 +16,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "<div style=\"width: 100%; \"> <div style=\"background:#00a0e4;color:white;font-family:'arial', monospace; text-align: center; padding: 50px 0; border-radius:10px; height:10px; width:100%; float:left \" > <span style=\"font-size:12px;position:relative; top:-25px\">  Please provide us your feedback <span style=\"font-size:14px;position:relative;COLOR:WHITE\"> <a href=\"https://forms.gle/C8TdLQUAS9r8BNJM8\">here</a>.</span></span>  <br> <span style=\"font-size:17px;position:relative; top:-20px\">  Suggestions are welcome! </span> </div> "
+    "<div style=\"width: 100%; \"> <div style=\"background:linear-gradient(to right,#FDC86E,#fbb144);color:white;font-family:'arial', monospace; text-align: center; padding: 50px 0; border-radius:10px; height:10px; width:100%; float:left \" > <span style=\"font-size:12px;position:relative; top:-25px\">  Please provide us your feedback <span style=\"font-size:14px;position:relative;COLOR:WHITE\"> <a href=\"https://forms.gle/C8TdLQUAS9r8BNJM8\">here</a>.</span></span>  <br> <span style=\"font-size:17px;position:relative; top:-20px\">  Suggestions are welcome! </span> </div> "
   ]
   },
 "authors": {
