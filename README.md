@@ -1,4 +1,4 @@
-# ScientISST Notebooks
+# <div  style="font-family:'arial blACK', sans-serif,monospace; text-align: left; min-height: 100px; vertical-align:bottom;" >  <span style="position:absolute; left: 0; bottom: 0; padding-right: 120px; padding-bottom: 10px"> <b> ScientISST Notebooks</b></span> <img src="https://github.com/PIA-Group/ScientISST-notebooks/raw/master/_Resources/Images/logo.png" style=" background:#FDC86E;border-radius:10px;height:100px;top:0; position:relative" width=100 align="right" /> </div>
 
 ## Courses
 
