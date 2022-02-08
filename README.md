@@ -10,6 +10,7 @@
 
 ## List of All Contents
 - [Master Table](https://github.com/PIA-Group/ScientISST-notebooks/blob/master/MasterTable.md)
+- [Python Cheat Sheet](https://github.com/PIA-Group/ScientISST-notebooks/tree/master/_Resources/Python_cheat_sheet.pdf)
  
  Chapter | Notebooks
  --- | --- 
