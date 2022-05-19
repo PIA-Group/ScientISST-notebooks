@@ -1,5 +1,7 @@
 # <div  style="font-family:'arial blACK', sans-serif,monospace; text-align: left; min-height: 100px; vertical-align:bottom;" >  <span style="position:absolute; left: 0; bottom: 0; padding-right: 120px; padding-bottom: 10px"> <b> ScientISST Notebooks</b></span> <img src="https://github.com/PIA-Group/ScientISST-notebooks/raw/master/_Resources/Images/logo.png" style=" background:#FDC86E;border-radius:10px;height:100px;top:0; position:relative" width=100 align="right" /> </div>
 
+## Migrated to [scientisst/notebooks](https://github.com/scientisst/notebooks).
+
 ## Courses
 
 - [IEB - Introduction to Biomedical Engineering](https://github.com/PIA-Group/ScientISST-notebooks/blob/master/_Courses/IST-UL-IEB-IntroductiontoBiomedicalEngineering.md) - ```Instituto Superior Técnico, Universidade de Lisboa```
